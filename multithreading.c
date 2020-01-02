@@ -63,9 +63,10 @@ int main(){
 	    exit(EXIT_FAILURE);
 	}
 
+    pthread_join(th1, NULL);
+    printf("Thread1 completed %ld\n", count);
     pthread_join(th2, NULL);
     printf("Thread2 completed %ld\n", count);
-    pthread_join(th1, NULL);
 
     printf("Finally - %ld", count);
 
